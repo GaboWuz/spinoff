@@ -874,13 +874,13 @@ class PlayState extends MusicBeatState
 				// evilTrail.changeGraphic()
 				add(evilTrail);
 				// evilTrail.scrollFactor.set(1.1, 1.1);
+        }
         case 'normal':
 				boyfriend.x = 840;
         boyfriend.y = 300;
 
         dad.x = 300;
         dad.y = 0;
-				}
 
 
 				boyfriend.x += 200;
