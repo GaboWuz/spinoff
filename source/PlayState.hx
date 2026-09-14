@@ -803,11 +803,11 @@ class PlayState extends MusicBeatState
 
       case "furrylol":
         gf.alpha = 0.0001;
-				dad.x -= 100;
-        dad.y += 140;
+				dad.x = 100;
+        dad.y = 140;
 
-        camPos.x -= 20;
-        camPos.y += 70;
+        camPos.x = 20;
+        camPos.y = 70;
 			case "spooky":
 				dad.y += 200;
 			case "monster":
@@ -838,8 +838,8 @@ class PlayState extends MusicBeatState
     switch (SONG.player1)
     {
         case "rascunhobarf":
-				boyfriend.x -= 160;
-        boyfriend.y += 180;
+				boyfriend.x = 160;
+        boyfriend.y = 180;
 
         camPos.x += 70;
         camPos.y += 80;

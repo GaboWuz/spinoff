@@ -559,7 +559,7 @@ class Character extends FlxSprite
 		dance();
 
     
-		/* if (isPlayer)
+		if (isPlayer)
 		{
 			flipX = !flipX;
 
@@ -579,7 +579,7 @@ class Character extends FlxSprite
 					animation.getByName('singLEFTmiss').frames = oldMiss;
 				}
 			}
-		}*/
+		}
 	} 
 
 	override function update(elapsed:Float)
