@@ -170,6 +170,10 @@ class PlayState extends MusicBeatState
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
 
+  var gabodiaz:FlxSprite;
+  var mess:FlxSprite;
+  var shader:FlxSprite;
+
 	var fc:Bool = true;
 
 	var bgGirls:BackgroundGirls;
@@ -697,17 +701,17 @@ class PlayState extends MusicBeatState
             pudim.scale.set(1.32, 1.32);
             add(pudim);
             
-            var gabodiaz = new FlxSprite(1100, 220);
+            gabodiaz = new FlxSprite(1100, 220);
             gabodiaz.frames = Paths.getSparrowAtlas('stage/gagbis');
             gabodiaz.setGraphicSize(Std.int(gabodiaz.height * 1.1));
             gabodiaz.animation.addByPrefix('anim', 'idle', 24, true);
             gabodiaz.animation.play('anim');
             
-            var mess = new FlxSprite(-720, -240).loadGraphic(Paths.image('stage/mesa'));
+            mess = new FlxSprite(-720, -240).loadGraphic(Paths.image('stage/mesa'));
             mess.scrollFactor(1.2, 1.2);
             mess.scale.set(0.86, 0.86);
             
-            var shader = new FlxSprite(-500, -200).loadGraphic(Paths.image('stage/ata'));
+            shader = new FlxSprite(-500, -200).loadGraphic(Paths.image('stage/ata'));
             shader.alpha = 0.367;
         }
 			case 'stage':
