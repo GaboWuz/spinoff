@@ -802,6 +802,7 @@ class PlayState extends MusicBeatState
 				}
 
       case "furrylol":
+        gf.alpha = 0.0001;
 				dad.x -= 100;
         dad.y += 140;
 
