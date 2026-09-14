@@ -2121,7 +2121,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
           case 'furrylol':
-						camFollow.y = dad.getMidpoint().y + 10;
+						camFollow.y = dad.getMidpoint().y + 8;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2159,8 +2159,8 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
-						camFollow.x = boyfriend.getMidpoint().x + 10;
-            camFollow.y = boyfriend.getMidpoint().y + 13;
+						camFollow.x = boyfriend.getMidpoint().x + 5;
+            camFollow.y = boyfriend.getMidpoint().y + 10;
 				}
 			}
 		}
