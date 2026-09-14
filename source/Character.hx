@@ -342,7 +342,7 @@ class Character extends FlxSprite
         }
 				
 				animation.addByPrefix('firstDeath', 'MORTO', 24, false);
-				animation.addByPrefix('deathLoop', 'dedloop', 24, true);
+				animation.addByPrefix('deathLoop', 'dedloop', 24, false);
 				animation.addByPrefix('deathConfirm', 'okey', 24, false);
 
 				addOffset('idle');
@@ -584,7 +584,7 @@ class Character extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		if (!curCharacter.startsWith('bf'))
+		if (!curCharacter.startsWith('bf') || !curCharacter.startsWith('rascunho'))
 		{
 			if (animation.curAnim.name.startsWith('sing'))
 			{
@@ -595,7 +595,7 @@ class Character extends FlxSprite
 
 			if (curCharacter == 'dad')
 				dadVar = 6.1;
-      if (curCharacter == 'rascunhobarf')
+      if (curCharacter == 'furrylol')
 				dadVar = 4.1;
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
