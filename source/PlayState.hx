@@ -966,7 +966,7 @@ class PlayState extends MusicBeatState
 				songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
 					'songPositionBar', 0, 90000);
 				songPosBar.scrollFactor.set();
-				songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
+				songPosBar.createFilledBar(0xFF9199b6, 0xFFFFE5AD);
 				add(songPosBar);
 	
 				var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20,songPosBG.y,0,SONG.song, 16);
@@ -988,7 +988,7 @@ class PlayState extends MusicBeatState
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		healthBar.createFilledBar(0xFFFF335B, 0xFFFFE5AD);
 		// healthBar
 		add(healthBar);
 
@@ -2121,7 +2121,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
           case 'furrylol':
-						camFollow.y = dad.getMidpoint().y + 8;
+						camFollow.y = dad.getMidpoint().y + 7;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2159,8 +2159,8 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
-						camFollow.x = boyfriend.getMidpoint().x + 5;
-            camFollow.y = boyfriend.getMidpoint().y + 10;
+						camFollow.x = boyfriend.getMidpoint().x - 1;
+            camFollow.y = boyfriend.getMidpoint().y + 9;
 				}
 			}
 		}

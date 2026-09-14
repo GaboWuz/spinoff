@@ -142,7 +142,7 @@ class FreeplayState extends MusicBeatState
 			trace(md);
 		 */
 		
-		#if mobile addVPad(FULL, A_B_C); #end
+		#if mobile addVPad(UP_DOWN, A_B_C); #end
 
 		super.create();
 	}
@@ -196,11 +196,6 @@ class FreeplayState extends MusicBeatState
 			changeSelection(1);
 		}
 
-		if (controls.LEFT_P)
-			changeDiff(-1);
-		if (controls.RIGHT_P)
-			changeDiff(1);
-
 		if (controls.BACK)
 		{
 			FlxG.switchState(new MainMenuState());
@@ -233,10 +228,10 @@ class FreeplayState extends MusicBeatState
 	{
 		curDifficulty += change;
 
-		if (curDifficulty < 0)
+		if (curDifficulty < 2)
 			curDifficulty = 2;
 		if (curDifficulty > 2)
-			curDifficulty = 0;
+			curDifficulty = 2;
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);

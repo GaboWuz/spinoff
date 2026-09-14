@@ -43,7 +43,6 @@ class MainMenuState extends MusicBeatState
 	public static var gameVer:String = "0.2.7.1";
 
 	var magenta:FlxSprite;
-	var camFollow:FlxObject;
 	public static var finishedFunnyMove:Bool = false;
 
 	override function create()
@@ -66,9 +65,6 @@ class MainMenuState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		add(bg);
-
-		camFollow = new FlxObject(0, 0, 1, 1);
-		add(camFollow);
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuBGBlue'));
 		magenta.setGraphicSize(Std.int(magenta.width * 1.05));
@@ -107,8 +103,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		firstStart = false;
-
-		FlxG.camera.follow(camFollow, null, 0.60 * (60 / FlxG.save.data.fpsCap));
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0,  "Vs idklool V2.5 CANCELLED", 12);
 		versionShit.scrollFactor.set();
@@ -251,7 +245,6 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected && finishedFunnyMove)
 			{
 				spr.animation.play('selected');
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
 			}
 
 			spr.updateHitbox();
