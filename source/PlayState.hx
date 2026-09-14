@@ -783,10 +783,10 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf';
 		}
 
-		gf = new Character(400, 130, gfVersion);
+		gf = new Character(0, 0, gfVersion);
 		gf.scrollFactor.set(0.95, 0.95);
 
-		dad = new Character(100, 100, SONG.player2);
+		dad = new Character(0, 0, SONG.player2);
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 
@@ -803,11 +803,11 @@ class PlayState extends MusicBeatState
 
       case "furrylol":
         gf.alpha = 0.0001;
-				dad.x = 100;
-        dad.y = 140;
+				dad.x -= 100;
+        dad.y += 140;
 
-        camPos.x = 20;
-        camPos.y = 70;
+        camPos.x -= 20;
+        camPos.y += 70;
 			case "spooky":
 				dad.y += 200;
 			case "monster":
@@ -838,16 +838,14 @@ class PlayState extends MusicBeatState
     switch (SONG.player1)
     {
         case "rascunhobarf":
-				boyfriend.x = 160;
-        boyfriend.y = 180;
+				boyfriend.x -= 160;
+        boyfriend.y += 180;
 
         camPos.x += 70;
         camPos.y += 80;
     }
-
-
 		
-		boyfriend = new Boyfriend(770, 450, SONG.player1);
+		boyfriend = new Boyfriend(0, 0, SONG.player1);
 
 		// REPOSITIONING PER STAGE
 		switch (curStage)
@@ -880,18 +878,17 @@ class PlayState extends MusicBeatState
 				add(evilTrail);
 				// evilTrail.scrollFactor.set(1.1, 1.1);
         }
-        case 'normal':
-				boyfriend.x = 840;
-        boyfriend.y = 300;
-
-        dad.x = 300;
-        dad.y = 0;
-
 
 				boyfriend.x += 200;
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+      case 'normal':
+				boyfriend.x = 840;
+        boyfriend.y = 300;
+
+        dad.x = 300;
+        dad.y = 0;
 		}
 
 		add(gf);
