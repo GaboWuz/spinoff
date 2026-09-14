@@ -670,12 +670,12 @@ class PlayState extends MusicBeatState
 						defaultCamZoom = 0.8;
 						curStage = 'normal';
 						var backk = new FlxSprite(-500, -300).loadGraphic(Paths.image('stage/back'));
-            backk.scrollFactor(0.12, 0.12);
+            backk.scrollFactor.set(0.12, 0.12);
             backk.scale.set(0.8, 0.8);
             add(backk);
             
             var windows = new FlxSprite(-1000, -490).loadGraphic(Paths.image('stage/window'));
-            windows.scrollFactor(0.12, 0.12);
+            windows.scrollFactor.set(0.12, 0.12);
             windows.scale.set(0.34, 0.34);
             add(windows);
             
@@ -708,7 +708,7 @@ class PlayState extends MusicBeatState
             gabodiaz.animation.play('anim');
             
             mess = new FlxSprite(-720, -240).loadGraphic(Paths.image('stage/mesa'));
-            mess.scrollFactor(1.2, 1.2);
+            mess.scrollFactor.set(1.2, 1.2);
             mess.scale.set(0.86, 0.86);
             
             shader = new FlxSprite(-500, -200).loadGraphic(Paths.image('stage/ata'));
