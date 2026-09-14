@@ -877,10 +877,10 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
         
       case 'normal':
-				boyfriend.x = 840;
-        boyfriend.y = 300;
-        dad.x = 300;
-        dad.y = 0;
+				boyfriend.x = 770;
+        boyfriend.y = 195;
+        dad.x = 260;
+        dad.y = 140;
 		}
 
 		add(gf);
