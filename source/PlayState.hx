@@ -889,13 +889,14 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			add(limo);
 
+    add(dad);
+		add(boyfriend);
+
     if (curStage == 'normal')
       add(gabodiaz);
       add(mess);
       add(shader);
 
-		add(dad);
-		add(boyfriend);
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
@@ -966,7 +967,7 @@ class PlayState extends MusicBeatState
 				songPosBar = new FlxBar(songPosBG.x + 4, songPosBG.y + 4, LEFT_TO_RIGHT, Std.int(songPosBG.width - 8), Std.int(songPosBG.height - 8), this,
 					'songPositionBar', 0, 90000);
 				songPosBar.scrollFactor.set();
-				songPosBar.createFilledBar(0xFF9199b6, 0xFFFFE5AD);
+				songPosBar.createFilledBar(0xFF616275, 0xFFFFE5AD);
 				add(songPosBar);
 	
 				var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20,songPosBG.y,0,SONG.song, 16);
@@ -1377,7 +1378,7 @@ class PlayState extends MusicBeatState
 				'songPositionBar', 0, songLength - 1000);
 			songPosBar.numDivisions = 1000;
 			songPosBar.scrollFactor.set();
-			songPosBar.createFilledBar(FlxColor.GRAY, FlxColor.LIME);
+			songPosBar.createFilledBar(0xFF616275, 0xFFFFE5AD);
 			add(songPosBar);
 
 			var songName = new FlxText(songPosBG.x + (songPosBG.width / 2) - 20,songPosBG.y,0,SONG.song, 16);
@@ -2159,7 +2160,7 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
-						camFollow.x = boyfriend.getMidpoint().x - 1;
+						camFollow.x = boyfriend.getMidpoint().x - 9;
             camFollow.y = boyfriend.getMidpoint().y + 9;
 				}
 			}
