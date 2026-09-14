@@ -2160,7 +2160,7 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
-						camFollow.x = boyfriend.getMidpoint().x - 9;
+						camFollow.x = boyfriend.getMidpoint().x - 13;
             camFollow.y = boyfriend.getMidpoint().y + 9;
 				}
 			}
