@@ -804,7 +804,7 @@ class PlayState extends MusicBeatState
       case "furrylol":
         gf.alpha = 0.0001;
 				dad.x -= 100;
-        dad.y += 140;
+        dad.y += 170;
 
         camPos.x -= 20;
         camPos.y += 70;
@@ -877,9 +877,9 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
         
       case 'normal':
-				boyfriend.x = 770;
-        boyfriend.y = 195;
-        dad.x = 260;
+				boyfriend.x = 720;
+        boyfriend.y = 175;
+        dad.x = 220;
         dad.y = 140;
 		}
 
@@ -993,7 +993,7 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 
 		// Add Kade Engine watermark
-		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + (Main.watermarks ? " - KE " + MainMenuState.kadeEngineVer : ""), 16);
+		kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + (Main.watermarks ? " - Vs Idklool " + MainMenuState.kadeEngineVer : ""), 16);
 		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		kadeEngineWatermark.scrollFactor.set();
 		add(kadeEngineWatermark);

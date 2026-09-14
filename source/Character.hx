@@ -333,8 +333,8 @@ class Character extends FlxSprite
 
 				animation.addByPrefix('idle', 'idle', 24, true);
 				animation.addByPrefix('singUP', 'up', 24, false);
-				animation.addByPrefix('singLEFT', 'left', 24, false);
-				animation.addByPrefix('singRIGHT', 'right', 24, false);
+				animation.addByPrefix('singLEFT', 'right', 24, false);
+				animation.addByPrefix('singRIGHT', 'left', 24, false);
 				animation.addByPrefix('singDOWN', 'down', 24, false);
         for (anim in ['singLEFT', 'singRIGHT', 'singUP', 'singDOWN'])
         {
