@@ -835,16 +835,6 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
-    switch (SONG.player1)
-    {
-        case "rascunhobarf":
-				boyfriend.x -= 160;
-        boyfriend.y += 180;
-
-        camPos.x += 70;
-        camPos.y += 80;
-    }
-		
 		boyfriend = new Boyfriend(0, 0, SONG.player1);
 
 		// REPOSITIONING PER STAGE
@@ -864,11 +854,13 @@ class PlayState extends MusicBeatState
 			case 'mallEvil':
 				boyfriend.x += 320;
 				dad.y -= 80;
+        
 			case 'school':
 				boyfriend.x += 200;
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+        
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
 				// trailArea.scrollFactor.set();
@@ -883,10 +875,10 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+        
       case 'normal':
 				boyfriend.x = 840;
         boyfriend.y = 300;
-
         dad.x = 300;
         dad.y = 0;
 		}
