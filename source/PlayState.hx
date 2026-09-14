@@ -877,8 +877,8 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
         
       case 'normal':
-				boyfriend.x = 720;
-        boyfriend.y = 175;
+				boyfriend.x = 690;
+        boyfriend.y = 165;
         dad.x = 220;
         dad.y = 140;
 		}
@@ -2120,6 +2120,8 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+          case 'furrylol':
+						camFollow.y = dad.getMidpoint().y + 40;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2156,6 +2158,8 @@ class PlayState extends MusicBeatState
 					case 'schoolEvil':
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
+          case 'normal':
+						camFollow.x = boyfriend.getMidpoint().x + 50;
 				}
 			}
 		}
