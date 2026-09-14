@@ -2121,7 +2121,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
           case 'furrylol':
-						camFollow.y = dad.getMidpoint().y + 20;
+						camFollow.y = dad.getMidpoint().y + 10;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2160,7 +2160,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
 						camFollow.x = boyfriend.getMidpoint().x + 10;
-            camFollow.x = boyfriend.getMidpoint().y + 21;
+            camFollow.y = boyfriend.getMidpoint().y + 13;
 				}
 			}
 		}
@@ -2651,7 +2651,7 @@ class PlayState extends MusicBeatState
 				case 'bad':
 					daRating = 'bad';
 					score = 0;
-					health -= 0.06;
+					health -= 0.02;
 					ss = false;
 					bads++;
 					if (FlxG.save.data.accuracyMod == 0)
@@ -2724,11 +2724,11 @@ class PlayState extends MusicBeatState
 			switch(daRating)
 			{
 				case 'shit' | 'bad':
-					currentTimingShown.color = FlxColor.RED;
+					currentTimingShown.color = FlxColor.GRAY;
 				case 'good':
-					currentTimingShown.color = FlxColor.GREEN;
+					currentTimingShown.color = FlxColor.WHITE;
 				case 'sick':
-					currentTimingShown.color = FlxColor.CYAN;
+					currentTimingShown.color = FlxColor.WHITE;
 			}
 			currentTimingShown.borderStyle = OUTLINE;
 			currentTimingShown.borderSize = 1;
