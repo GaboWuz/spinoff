@@ -3494,7 +3494,7 @@ class PlayState extends MusicBeatState
 			camHUD.zoom += 0.03;
 		}
 
-    if (curSong.toLowerCase() == 'likeded' && curBeat >= 36 && curBeat < 68 && camZooming && FlxG.camera.zoom < 1.35)
+    if (curSong.toLowerCase() == 'likeded' && curBeat >= 36 && curBeat < 100 && camZooming && FlxG.camera.zoom < 1.35)
 		{
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
