@@ -2121,7 +2121,7 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
           case 'furrylol':
-						camFollow.y = dad.getMidpoint().y + 40;
+						camFollow.y = dad.getMidpoint().y + 20;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -2159,7 +2159,8 @@ class PlayState extends MusicBeatState
 						camFollow.x = boyfriend.getMidpoint().x - 200;
 						camFollow.y = boyfriend.getMidpoint().y - 200;
           case 'normal':
-						camFollow.x = boyfriend.getMidpoint().x + 50;
+						camFollow.x = boyfriend.getMidpoint().x + 10;
+            camFollow.x = boyfriend.getMidpoint().y + 21;
 				}
 			}
 		}
@@ -3458,6 +3459,17 @@ class PlayState extends MusicBeatState
 				dad.playAnim('danceRight');
 		}
 
+    if (curSong == 'Likeded')
+      switch (curBeat) {
+        case 68: defaultCamZoom = 0.9;
+        case 100: defaultCamZoom = 0.78;
+        case 132: defaultCamZoom = 0.8;
+        case 164: defaultCamZoom = 0.9;
+        case 196: defaultCamZoom = 0.8;
+        case 212: defaultCamZoom = 0.85;
+        case 228: defaultCamZoom = 0.87;
+      }
+
 		if (SONG.notes[Math.floor(curStep / 16)] != null)
 		{
 			if (SONG.notes[Math.floor(curStep / 16)].changeBPM)
@@ -3481,6 +3493,18 @@ class PlayState extends MusicBeatState
 			FlxG.camera.zoom += 0.015;
 			camHUD.zoom += 0.03;
 		}
+
+    if (curSong.toLowerCase() == 'likeded' && curBeat >= 36 && curBeat < 68 && camZooming && FlxG.camera.zoom < 1.35)
+		{
+			FlxG.camera.zoom += 0.015;
+			camHUD.zoom += 0.03;
+    }
+
+    if (curSong.toLowerCase() == 'likeded' && curBeat >= 132 && curBeat < 196 && camZooming && FlxG.camera.zoom < 1.35)
+		{
+			FlxG.camera.zoom += 0.015;
+			camHUD.zoom += 0.03;
+    }
 
 		if (camZooming && FlxG.camera.zoom < 1.35 && curBeat % 4 == 0)
 		{
