@@ -1,10 +1,6 @@
 {
 	"song": {
-		"sectionLengths": [],
 		"player1": "rascunhobark",
-		"events": [],
-		"gfVersion": "gf",
-		"player2": "gf",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -570,12 +566,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": null,
 		"song": "Tutorial",
-		"stage": "stage",
-		"sections": 0,
-		"needsVoices": false,
-		"speed": 1,
 		"bpm": 100
 	}
 }
