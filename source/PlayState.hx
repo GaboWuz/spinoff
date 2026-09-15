@@ -886,16 +886,18 @@ class PlayState extends MusicBeatState
 		add(gf);
 
 		// Shitty layering but whatev it works LOL
-		if (curStage == 'limo')
+		if (curStage == 'limo'){
 			add(limo);
+    }
 
     add(dad);
 		add(boyfriend);
 
-    if (curStage == 'normal')
+    if (curStage == 'normal'){
       add(gabodiaz);
       add(mess);
       add(shader);
+    }
 
 		if (loadRep)
 		{
