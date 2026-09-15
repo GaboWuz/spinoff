@@ -795,12 +795,9 @@ class PlayState extends MusicBeatState
 			case 'gf':
 				dad.setPosition(gf.x, gf.y);
 				gf.visible = false;
-				if (isStoryMode)
-				{
-					camPos.x += 600;
-					tweenCamIn();
-				}
-
+				
+				camPos.x += 600;
+				tweenCamIn();
       case "furrylol":
         gf.alpha = 0.0001;
 				dad.x -= 100;
@@ -881,7 +878,12 @@ class PlayState extends MusicBeatState
         boyfriend.y = 165;
         dad.x = 220;
         dad.y = 140;
-		}
+      case 'stage':
+				boyfriend.x = 770;
+        boyfriend.y = 450;
+        gf.x = dad.x = 400;
+        gf.y = dad.y = 130;
+    }
 
 		add(gf);
 
