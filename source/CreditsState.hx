@@ -45,7 +45,6 @@ class CreditsState extends MusicBeatState
 		bg.setGraphicSize(Std.int(bg.width * 1.05));
 		bg.updateHitbox();
 		bg.screenCenter();
-    bg.color = 0xFF + purpleTeam[1];
 		bg.antialiasing = true;
 		add(bg);
 
@@ -60,7 +59,7 @@ class CreditsState extends MusicBeatState
 			grpMembers.add(teamText);
     }
 
-    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[3], 32);
+    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[2], 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		var scoreBG:FlxSprite = new FlxSprite(scoreText.x - 6, 0).makeGraphic(Std.int(FlxG.width * 0.35), 66, 0xFF000000);
@@ -102,7 +101,7 @@ class CreditsState extends MusicBeatState
     
     if (controls.ACCEPT)
     {
-      fancyOpenURL("https://" + purpleTeam[2]);
+      fancyOpenURL("https://" + purpleTeam[1]);
     }
 	}
 
