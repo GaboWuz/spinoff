@@ -30,6 +30,7 @@ class CreditsState extends MusicBeatState
     for (i in 0...creditsTeam.length)
     {
   	  var purpleTeam:Array<String> = creditsTeam[i].split(':');
+      songs.push(new CreditsMetadata(purpleTeam[0], purpleTeam[1], purpleTeam[2]));
     }
 		#if windows
 		// Updating Discord Rich Presence
@@ -67,6 +68,8 @@ class CreditsState extends MusicBeatState
 		add(scoreBG);
     
     add(scoreText);
+
+    changeSelection();
 
     #if mobile addVPad(UP_DOWN, A_B); #end
 
@@ -131,3 +134,16 @@ class CreditsState extends MusicBeatState
 		}
 	}
 }
+
+class CreditsMetadata
+{
+	public var nameDev:String = "";
+	public var youtubeLinks:String = "";
+	public var bioDev:String = "";
+
+	public function new(name:String, youtube:String, bio:String)
+	{
+		this.nameDev = name;
+		this.youtubeLinks = youtube;
+		this.bioDev = bio;
+  }
