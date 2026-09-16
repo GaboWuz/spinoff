@@ -51,7 +51,7 @@ class CreditsState extends MusicBeatState
 		bg.antialiasing = true;
 		add(bg);
 
-    memberIcon = new FlxSprite(-650, -330);
+    memberIcon = new FlxSprite(0, 20);
     memberIcon.antialiasing = true;
     add(memberIcon);
 
