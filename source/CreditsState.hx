@@ -21,7 +21,7 @@ class CreditsState extends MusicBeatState
   var curSelected:Int = 0;
   private var grpMembers:FlxTypedGroup<Alphabet>;
 
-  var purpleTeam:Array<String> = [];
+  var purpleTeam:Array<CreditsMetadata> = [];
 
 	override function create()
 	{
@@ -29,8 +29,8 @@ class CreditsState extends MusicBeatState
 
     for (i in 0...creditsTeam.length)
     {
-  	  var purpleTeam:Array<String> = creditsTeam[i].split(':');
-      songs.push(new CreditsMetadata(purpleTeam[0], purpleTeam[1], purpleTeam[2]));
+  	  var data:Array<String> = creditsTeam[i].split(':');
+      purpleTeam.push(new CreditsMetadata(data[0], data[1], data[2]));
     }
 		#if windows
 		// Updating Discord Rich Presence
@@ -147,3 +147,4 @@ class CreditsMetadata
 		this.youtubeLinks = youtube;
 		this.bioDev = bio;
   }
+}
