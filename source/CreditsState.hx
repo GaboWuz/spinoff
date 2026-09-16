@@ -105,7 +105,7 @@ class CreditsState extends MusicBeatState
     
     if (controls.ACCEPT)
     {
-      fancyOpenURL("https://" + purpleTeam[curSelected).youtubeLinks);
+      fancyOpenURL("https://" + purpleTeam[curSelected].youtubeLinks);
     }
 	}
 
