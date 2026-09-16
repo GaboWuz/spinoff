@@ -19,6 +19,7 @@ using StringTools;
 class CreditsState extends MusicBeatState
 {
   var curSelected:Int = 0;
+  var scoreText:FlxText;
   private var grpMembers:FlxTypedGroup<Alphabet>;
 
   var purpleTeam:Array<CreditsMetadata> = [];
@@ -60,7 +61,7 @@ class CreditsState extends MusicBeatState
 			grpMembers.add(teamText);
     }
 
-    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[i].bioDev, 32);
+    scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[0].bioDev, 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		var scoreBG:FlxSprite = new FlxSprite(scoreText.x - 6, 0).makeGraphic(Std.int(FlxG.width * 0.35), 66, 0xFF000000);
@@ -104,7 +105,7 @@ class CreditsState extends MusicBeatState
     
     if (controls.ACCEPT)
     {
-      fancyOpenURL("https://" + purpleTeam[i].youtubeLinks);
+      fancyOpenURL("https://" + purpleTeam[curSelected).youtubeLinks);
     }
 	}
 
@@ -118,7 +119,9 @@ class CreditsState extends MusicBeatState
 			curSelected = purpleTeam.length - 1;
 		if (curSelected >= purpleTeam.length)
 			curSelected = 0;
-		
+
+    scoreText.text = purpleTeam[curSelected].bioDev;
+    
 		var bullShit:Int = 0;
 
 		for (item in grpMembers.members)
