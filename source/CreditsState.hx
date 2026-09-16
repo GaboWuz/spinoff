@@ -21,6 +21,8 @@ class CreditsState extends MusicBeatState
   var curSelected:Int = 0;
   private var grpMembers:FlxTypedGroup<Alphabet>;
 
+  var purpleTeam:Array<String> = [];
+
 	override function create()
 	{
     var creditsTeam = CoolUtil.coolTextFile(Paths.txt('creditsChristrashings'));
@@ -58,7 +60,7 @@ class CreditsState extends MusicBeatState
 			grpMembers.add(teamText);
     }
 
-    scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[3], 32);
+    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[3], 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		var scoreBG:FlxSprite = new FlxSprite(scoreText.x - 6, 0).makeGraphic(Std.int(FlxG.width * 0.35), 66, 0xFF000000);
