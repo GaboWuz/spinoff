@@ -45,7 +45,7 @@ class CreditsState extends MusicBeatState
 		bg.setGraphicSize(Std.int(bg.width * 1.05));
 		bg.updateHitbox();
 		bg.screenCenter();
-    bg.color = "0xFF" + purpleTeam[1];
+    bg.color = 0xFF + purpleTeam[1];
 		bg.antialiasing = true;
 		add(bg);
 
