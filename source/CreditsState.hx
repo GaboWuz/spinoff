@@ -21,6 +21,7 @@ class CreditsState extends MusicBeatState
   var curSelected:Int = 0;
   var scoreText:FlxText;
   private var grpMembers:FlxTypedGroup<Alphabet>;
+  var memberIcon:FlxSprite;
 
   var purpleTeam:Array<CreditsMetadata> = [];
 
@@ -49,6 +50,10 @@ class CreditsState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = true;
 		add(bg);
+
+    memberIcon = new FlxSprite(0, 0);
+    memberIcon.antialiasing = true;
+    add(memberIcon);
 
     grpMembers = new FlxTypedGroup<Alphabet>();
 		add(grpMembers);
@@ -105,7 +110,10 @@ class CreditsState extends MusicBeatState
     
     if (controls.ACCEPT)
     {
-      fancyOpenURL("https://" + purpleTeam[curSelected].youtubeLinks);
+      if (purpleTeam[curSelected].youtubeLinks != "" && purpleTeam[curSelected].youtubeLinks != null)
+      {
+        fancyOpenURL("https://" + purpleTeam[curSelected].youtubeLinks);
+      }
     }
 	}
 
@@ -121,6 +129,11 @@ class CreditsState extends MusicBeatState
 			curSelected = 0;
 
     scoreText.text = purpleTeam[curSelected].bioDev;
+
+    var iconPath = 'credits/icon-' + purpleTeam[curSelected].nameDev;
+    memberIcon.loadGraphic(Paths.image(iconPath));
+    memberIcon.setGraphicSize(Std.int(memberIcon.width * 0.9));
+    memberIcon.updateHitbox();
     
 		var bullShit:Int = 0;
 
