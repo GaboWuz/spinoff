@@ -54,13 +54,13 @@ class CreditsState extends MusicBeatState
 
     for (i in 0...purpleTeam.length)
 		{
-			var teamText:Alphabet = new Alphabet(0, (70 * i) + 30, purpleTeam[0], true, false, true);
+			var teamText:Alphabet = new Alphabet(0, (70 * i) + 30, purpleTeam[i].nameDev, true, false, true);
 			teamText.isMenuItem = true;
 			teamText.targetY = i;
 			grpMembers.add(teamText);
     }
 
-    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[2], 32);
+    var scoreText = new FlxText(FlxG.width * 0.7, 5, 0, purpleTeam[i].bioDev, 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 
 		var scoreBG:FlxSprite = new FlxSprite(scoreText.x - 6, 0).makeGraphic(Std.int(FlxG.width * 0.35), 66, 0xFF000000);
@@ -104,7 +104,7 @@ class CreditsState extends MusicBeatState
     
     if (controls.ACCEPT)
     {
-      fancyOpenURL("https://" + purpleTeam[1]);
+      fancyOpenURL("https://" + purpleTeam[i].youtubeLinks);
     }
 	}
 
