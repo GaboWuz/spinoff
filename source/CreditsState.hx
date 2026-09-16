@@ -51,7 +51,7 @@ class CreditsState extends MusicBeatState
 		bg.antialiasing = true;
 		add(bg);
 
-    memberIcon = new FlxSprite(0, 0);
+    memberIcon = new FlxSprite(-650, -330);
     memberIcon.antialiasing = true;
     add(memberIcon);
 
@@ -132,7 +132,7 @@ class CreditsState extends MusicBeatState
 
     var iconPath = 'credits/icon-' + purpleTeam[curSelected].nameDev;
     memberIcon.loadGraphic(Paths.image(iconPath));
-    memberIcon.setGraphicSize(Std.int(memberIcon.width * 0.9));
+    memberIcon.setGraphicSize(Std.int(memberIcon.width * 0.5));
     memberIcon.updateHitbox();
     
 		var bullShit:Int = 0;
