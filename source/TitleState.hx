@@ -381,28 +381,22 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 1:
-				createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-			// credTextShit.visible = true;
+				createCoolText(['Yurii', 'StarNova', 'Idklool', 'DGL']);
 			case 3:
-				addMoreText('present');
-			// credTextShit.text += '\npresent...';
-			// credTextShit.addText();
+				addMoreText('apresenta...');
 			case 4:
 				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = 'In association \nwith';
-			// credTextShit.screenCenter();
 			case 5:
 				if (Main.watermarks)
-					createCoolText(['Kade Engine', 'by']);
+					createCoolText(['Vs Idklool v2.5', 'CANCELLED por']);
 				else
-					createCoolText(['In Partnership', 'with']);
+					createCoolText(['com ajuda', 'de']);
 			case 7:
 				if (Main.watermarks)
-					addMoreText('KadeDeveloper');
+					addMoreText('GaboTeam');
 				else
 				{
-					addMoreText('Newgrounds');
+					addMoreText('FalsaTeam');
 					ngSpr.visible = true;
 				}
 			// credTextShit.text += '\nNewgrounds';
@@ -425,13 +419,13 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-				addMoreText('Friday');
+				addMoreText('Vs');
 			// credTextShit.visible = true;
 			case 14:
-				addMoreText('Night');
+				addMoreText('Idklool');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				addMoreText('Collab'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();
